@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance</title>
+</head>
+<body>
+    <!--  THIS IS WHERE ALLL HTML STUFF GOES this is my demo-->
+    <div>
+        <form action='{{ url_for("home")  }}' method="post">
+            Start Point : <br> <input type="text" name="start_point" > <br>
+            End Point : <br> <input type="text" name="end_point"> <br>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>
