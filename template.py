@@ -79,4 +79,4 @@ def find_routes(start_place : Place, end_place : Place):
     pass
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=4000)
