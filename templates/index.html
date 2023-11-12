@@ -3,38 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login with Google</title>
+    <title>Login Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-
-        #login-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4285F4;
-            color: #ffffff;
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h2>Login with Google</h2>
-    <p>Click the button below to log in with your Google account:</p>
 
-    <a id="login-button" href="/login">Login with Google</a>
+<form action="/login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
 
-    <script>
-        // Optional: You can add a script to redirect to the Google OAuth login page directly
-        // Uncomment the lines below and replace 'YOUR_CLIENT_ID' with your actual client ID
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
 
-        // document.getElementById('login-button').addEventListener('click', function() {
-        //     window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost:5000/callback&response_type=code&scope=openid%20profile%20email';
-        // });
-    </script>
+    <button type="submit">Login</button>
+</form>
+
 </body>
 </html>

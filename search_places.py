@@ -6,7 +6,7 @@ import requests
 def search_places(api_key, query, location=None, radius=5000):
     query = request.args.get('query')
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
-
+    
     params = {
         "query": query,
         "key": api_key
