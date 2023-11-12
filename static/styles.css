@@ -21,13 +21,25 @@ body {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding-top : 100px;
+    padding-left : 50px;
+    border-right: 1px solid #000027;
+  }
+
+  #info-container h1 {
+    font-size: 24px;
+    color: #000027;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
   }
   
   label {
     display: block;
     margin-bottom: 12px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
   }
   
   input {
@@ -55,3 +67,20 @@ body {
     background-color: #000027;
   }
   
+  iphone-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .iphone-alert-content {
+    text-align: center;
+  }

@@ -6,23 +6,26 @@
   <title>Emergency Rerouting</title>
   <link rel="stylesheet" href="../static/styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJcg78DxqGirA9WAZb_ioD-9JxX5ExUOU&callback=initMap" async defer></script>
 </head>
 <body>
-
-  <div id="info-container">
     
-    <input type="text" id="placeInput1" placeholder="Type to search..." onkeyup="searchPlaces('placeInput1', 'resultsDropdown1')">
+  <div id="info-container">
+    <h1>Emergency Rerouting</h1>
+    <label for="startLocation">Starting Location</label>
+    <input type="text" id="placeInput1" placeholder="Enter current location" onkeyup="searchPlaces('placeInput1', 'resultsDropdown1')">
     <select id="resultsDropdown1" name="place1" size="5" style="display:none;" onchange="selectPlace('resultsDropdown1', 'placeInput1')"></select>
-
-    <input type="text" id="placeInput2" placeholder="Type to search..." onkeyup="searchPlaces('placeInput2', 'resultsDropdown2')">
+    
+    <label for="endLocation">Destination</label>
+    <input type="text" id="placeInput2" placeholder="Enter Destination" onkeyup="searchPlaces('placeInput2', 'resultsDropdown2')">
     <select id="resultsDropdown2" name="place2" size="5" style="display:none;" onchange="selectPlace('resultsDropdown2', 'placeInput2')"></select>
-    <button onclick="sendPlaceNames()">Initiate Emergency Rerouting</button>
+    <button onclick="sendPlaceNames()" id="button">Initiate Emergency Rerouting</button>
 </div>  
   <div id="map-container">
     <div id="map"></div>
   </div>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJcg78DxqGirA9WAZb_ioD-9JxX5ExUOU&callback=initMap" async defer></script>
+  
   <script src="../static/script.js"></script>
 </body>
 </html>

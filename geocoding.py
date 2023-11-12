@@ -2,13 +2,15 @@ import requests
 import json
 import sys 
 import os
+from set_api_key import read_api_key
 
 
     
-def get_lat_long(place_name, api_key):
+def get_lat_long(place_name, ):
     url = "https://maps.googleapis.com/maps/api/geocode/json"
 
     # Parameters for the API request
+    api_key = read_api_key(3141)
     params = {
         "address": place_name,
         "key": api_key

@@ -1,7 +1,8 @@
 from dataclasses import dataclass
 
 class Place:
-    name : str
-    latitude : float
-    longitude : float
+    def __init__(self, name, latitude, longitude):
+        name : str
+        latitude : float
+        longitude : float
     
