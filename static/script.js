@@ -119,32 +119,32 @@ function sendPlaceNames() {
             console.log("Initiating Emergency Rerouting...");
             // 37.772903679007456, -122.43040929805751 reroute
             // 
-            // alert('Emergency Rerouting initiated!');
-            // var destPoint = new google.maps.LatLng(37.772903679007456, -122.43040929805751); // Replace with your destination coordinates
-            // var directionsService = new google.maps.DirectionsService();
+            alert('Emergency Rerouting initiated!');
+            var destPoint = new google.maps.LatLng(37.772903679007456, -122.43040929805751); // Replace with your destination coordinates
+            var directionsService = new google.maps.DirectionsService();
 
-            // // Request for the directions from the car marker to the destination
-            // var request = {
-            //     origin: carMarker.getPosition(),
-            //     destination: destPoint,
-            //     travelMode: google.maps.TravelMode.DRIVING
-            // };
+            // Request for the directions from the car marker to the destination
+            var request = {
+                origin: carMarker.getPosition(),
+                destination: destPoint,
+                travelMode: google.maps.TravelMode.DRIVING
+            };
 
-            // // Use the DirectionsService to calculate the route
-            // directionsService.route(request, function (response, status) {
-            //     if (status === google.maps.DirectionsStatus.OK) {
-            //         // Display the route on the map
-            //         var directionsDisplay = new google.maps.DirectionsRenderer();
-            //         directionsDisplay.setMap(map);
-            //         directionsDisplay.setDirections(response);
-            //     } else {
-            //         // Handle the error appropriately
-            //         console.error('Error getting directions:', status);
-            //     }
-            // });
+            // Use the DirectionsService to calculate the route
+            directionsService.route(request, function (response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    // Display the route on the map
+                    var directionsDisplay = new google.maps.DirectionsRenderer();
+                    directionsDisplay.setMap(map);
+                    directionsDisplay.setDirections(response);
+                } else {
+                    // Handle the error appropriately
+                    console.error('Error getting directions:', status);
+                }
+            });
 
-            // Alert for rerouting
-            // alert('Emergency Rerouting initiated!');
+            //Alert for rerouting
+            //alert('Emergency Rerouting initiated!');
 
 
         })
