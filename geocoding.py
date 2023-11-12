@@ -3,17 +3,7 @@ import json
 import sys 
 import os
 
-def set_api_key():
-    api_key = sys.argv[1]
-    api_key = os.environ.get('GOOGLE_API_KEY_VARIABLE')
 
-    try:
-        api_key = os.environ.get('GOOGLE_API_KEY_VARIABLE')
-        print('------ API KEY IS SET -------')
-    except Exception as e:
-        print('------ Setting API KEY AS ENV VAR -----')
-        os.environ['GOOGLE_API_KEY_VARIABLE'] = api_key
-        
     
 def get_lat_long(place_name, api_key):
     url = "https://maps.googleapis.com/maps/api/geocode/json"
