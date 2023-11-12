@@ -25,12 +25,14 @@ The **Smart Ambulance Routing System** is a novel solution designed to enhance e
 
 ## Use of INRIX Technologies
 
-- **API Integration:** Efficient use of INRIX's APIs to determine optimal routes and real-time traffic management.
+- **API Integration:** Efficient use of INRIX's APIs to determine optimal routes and traffic management.
 - **Advantage:** The use of INRIX technologies enhances the system's accuracy and reliability.
 
 ## Project Completeness
 
-- **Demo Availability:** A fully functional demo illustrating all major functionalities.
+- **Demo Availability:** A fully functional demo illustrating all major functionalities:
+    # To Run the application locally, clone the above project and run the below command
+        1) python template.py 
 - **User Flow:** Seamless user experience, allowing users to complete actions without significant obstacles.
 
 ## Marketability
@@ -39,6 +41,17 @@ The **Smart Ambulance Routing System** is a novel solution designed to enhance e
 - **Business Plan:** The document outlines a plan for market entry, targeting emergency services and municipal corporations.
 - **Consumer Benefit:** Significant reduction in emergency response times, potentially saving lives.
 
+## Future Scope
+
+- **REAL-TIME COMMUNICATION WITH TRAFFIC INFRASTRUCTURE:**: Establish communication links with smart traffic infrastructure to enable real-time adjustments of traffic signals and road signs, further optimizing emergency vehicle routes. Furthermore utilizing the INRIX congestion API to solve congestions.
+
+- **TRIGGER NOTIFICATION TO THE USERS:**: Introduce a user notification system that proactively informs nearby drivers and pedestrians about an approaching ambulance. The system will provide real-time alerts, suggesting alternative routes for them to avoid obstructing the emergency vehicle’s path.
+
+- **MACHINE LEARNING CAPABILITIES:**: Using advanced machine learning techniques, we can determine a route that is most frequently used by emergency vehicles based on real-time and historical data, adapting to changing traffic patterns and urban dynamics.
+
+- **DYNAMIC INCIDENT MANAGEMENT:**:
+Develop capabilities to dynamically manage and respond to various types of incidents, allowing the system to adapt routes based on the nature of the emergency (e.g., medical emergencies, accidents, natural disasters).
+
 ## Conclusion
 
-The **Smart Ambulance Routing System** stands out for its technical sophistication, user-friendly design, innovative approach, and practical use of INRIX technologies. Its completion level and market readiness indicate a high potential for successful implementation and positive social impact.
+The **Smart Ambulance Routing System** stands out for its technical sophistication, user-friendly design, innovative approach, and practical use of Routing technologies. A solution that not only aims to have a social impact but also indicates a high potential for successful implementation.
