@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambulance</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Rerouting</title>
+  <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <!--  THIS IS WHERE ALLL HTML STUFF GOES this is my demo-->
-    <div>
-        <form action='{{ url_for("home")  }}' method="post">
-            Start Point : <br> <input type="text" name="start_point" > <br>
-            End Point : <br> <input type="text" name="end_point"> <br>
-            <button type="submit">submit</button>
-        </form>
-    </div>
+  <div id="info-container">
+    <label for="startLocation">Current Location:</label>
+    <input type="text" id="startLocation" placeholder="Enter current location">
+    <label for="endLocation">Hospitals Nearby:</label>
+    <input type="text" id="endLocation" placeholder="Enter destination">
+    <button onclick="findRoute()">Initiate Emergency Rerouting</button>
+  </div>
+
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJcg78DxqGirA9WAZb_ioD-9JxX5ExUOU&callback=initMap" async defer></script>
+  <script src="../static/script.js"></script>
 </body>
 </html>
