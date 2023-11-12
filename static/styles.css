@@ -19,15 +19,27 @@ body {
   #info-container {
     flex: 1;
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
+    padding-left: 50px;
+    padding-top: 200px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #000027;
   }
   
+  #info-container h1 {
+    font-size: 24px;
+    color: #000027;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+  }
+
   label {
     display: block;
     margin-bottom: 12px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
   }
   
   input {
