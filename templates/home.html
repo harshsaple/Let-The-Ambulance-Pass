@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emergency Rerouting</title>
   <link rel="stylesheet" href="../static/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <div id="info-container">
-    <label for="startLocation">Current Location:</label>
-    <input type="text" id="startLocation" placeholder="Enter current location">
-    <label for="endLocation">Hospitals Nearby:</label>
-    <input type="text" id="endLocation" placeholder="Enter destination">
-    <button onclick="findRoute()">Initiate Emergency Rerouting</button>
-  </div>
 
+  <div id="info-container">
+    
+    <input type="text" id="placeInput1" placeholder="Type to search..." onkeyup="searchPlaces('placeInput1', 'resultsDropdown1')">
+    <select id="resultsDropdown1" name="place1" size="5" style="display:none;" onchange="selectPlace('resultsDropdown1', 'placeInput1')"></select>
+
+    <input type="text" id="placeInput2" placeholder="Type to search..." onkeyup="searchPlaces('placeInput2', 'resultsDropdown2')">
+    <select id="resultsDropdown2" name="place2" size="5" style="display:none;" onchange="selectPlace('resultsDropdown2', 'placeInput2')"></select>
+    <button onclick="sendPlaceNames()">Initiate Emergency Rerouting</button>
+</div>  
   <div id="map-container">
     <div id="map"></div>
   </div>
