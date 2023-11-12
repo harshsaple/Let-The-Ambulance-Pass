@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #login-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4285F4;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login with Google</h2>
+    <p>Click the button below to log in with your Google account:</p>
+
+    <a id="login-button" href="/login">Login with Google</a>
+
+    <script>
+        // Optional: You can add a script to redirect to the Google OAuth login page directly
+        // Uncomment the lines below and replace 'YOUR_CLIENT_ID' with your actual client ID
+
+        // document.getElementById('login-button').addEventListener('click', function() {
+        //     window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost:5000/callback&response_type=code&scope=openid%20profile%20email';
+        // });
+    </script>
+</body>
+</html>
