@@ -3,6 +3,7 @@ import requests
 import os
 from geocoding import get_lat_long
 from models import Place
+from set_api_key import read_api_key
 
 app = Flask(__name__)
 
@@ -24,7 +25,8 @@ def json_demo():
 
 @app.route('/search_places', methods=["GET", "POST"])
 def search_places(location=None, radius=5000):
-    api_key = os.environ.get('GOOGLE_API_KEY')
+    # pincode = input("Enter pin code : ")
+    api_key = read_api_key(3141)
     query = request.args.get('query')
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 
